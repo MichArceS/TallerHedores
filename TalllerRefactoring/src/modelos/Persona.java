@@ -13,17 +13,15 @@ import java.util.ArrayList;
  */
 public class Persona {
     //Informacion de la persona
-    public String codigo;
-    public String nombre;
-    public String apellido;
-    public String facultad;
-    public int edad;
-    public String direccion;
-    public String telefono;
-    public ArrayList<Paralelo> paralelos;
+    protected String codigo;
+    protected String nombre;
+    protected String apellido;
+    protected String facultad;
+    protected int edad;
+    protected String direccion;
+    protected String telefono;
+    protected ArrayList<Paralelo> paralelos;
     
-    
-
     public Persona(String codigo, String nombre, String apellido, int edad) {
         this.codigo = codigo;
         this.nombre = nombre;
@@ -31,11 +29,9 @@ public class Persona {
         this.edad = edad;
     }
 
-
     public ArrayList<Paralelo> getParalelos() {
         return paralelos;
     }
 
-
-    
+    //Métodos Getters and Setters
 }

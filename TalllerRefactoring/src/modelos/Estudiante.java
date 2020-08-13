@@ -3,28 +3,28 @@ package modelos;
 import java.util.ArrayList;
 
 public class Estudiante extends Persona{
-    Paralelo[] paralelos=null;
+    private Paralelo[] paralelos=null;
     public Estudiante(String codigo, String nombre, String apellido, int edad) {
         super(codigo, nombre, apellido, edad);
     }
     
     //Calcula y devuelve la nota inicial contando examen, deberes, lecciones y talleres. El teorico y el practico se calcula por parcial.
-    public double CalcularNotaInicial(Paralelo p, double nexamen,double ndeberes, double nlecciones, double ntalleres){
-        return CalcularNota(p,nexamen,ndeberes,nlecciones,ntalleres);
+    public double CalcularNotaInicial(Paralelo p, ArrayList<Double> notas){
+        return CalcularNota(p, notas);
     }
     
     //Calcula y devuelve la nota final contando examen, deberes, lecciones y talleres. El teorico y el practico se calcula por parcial.
     
-    public double CalcularNotaFinal(Paralelo p, double nexamen,double ndeberes, double nlecciones, double ntalleres){
-        return CalcularNota(p,nexamen,ndeberes,nlecciones,ntalleres);
+    public double CalcularNotaFinal(Paralelo p, ArrayList<Double> notas){
+        return CalcularNota(p, notas);
     }
 
-    public double CalcularNota(Paralelo p, double nexamen,double ndeberes, double nlecciones, double ntalleres){
+    public double CalcularNota(Paralelo p, ArrayList<Double> notas){
         double nota= 0;
         for(Paralelo par:paralelos){
             if(p.equals(par)){
-                double notaTeorico=(nexamen+ndeberes+nlecciones)*0.80;
-                double notaPractico=(ntalleres)*0.20;
+                double notaTeorico=(notas[0]+notas[1]+notas[2])*0.80;
+                double notaPractico=(notas[3])*0.20;
                 nota=notaTeorico+notaPractico;
             }
         }
@@ -40,13 +40,7 @@ public class Estudiante extends Persona{
             }
         }
         return notaTotal;
-        
     }
+
+    //Métodos Get and Set de paralelos
 }
-        
-    
-    
-    
-            
-        
-        

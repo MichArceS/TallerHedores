@@ -3,17 +3,15 @@ package modelos;
 import java.util.ArrayList;
 
 public class Ayudante extends Estudiante{
-    public ArrayList<Paralelo> ayudantias;
+    private ArrayList<Paralelo> ayudantias;
 
     public Ayudante(String codigo, String nombre, String apellido, int edad) {
         super(codigo, nombre, apellido, edad);
     }
     
-
     public ArrayList<Paralelo> getAyudantias() {
         return ayudantias;
     }
-
 
     //Método para imprimir los paralelos que tiene asignados como ayudante
     public void MostrarParalelos(){
@@ -21,4 +19,6 @@ public class Ayudante extends Estudiante{
             //Muestra la info general de cada paralelo
         }
     }
+
+    //Métodos Get and Set de ayudantias
 }
