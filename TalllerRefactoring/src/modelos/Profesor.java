@@ -10,7 +10,7 @@ public class Profesor extends Persona{
     }
     
     public void anadirParalelos(Paralelo p){
-        paralelos.add(p);
+        boolean add = paralelos.add(p);
     }
     
 }
