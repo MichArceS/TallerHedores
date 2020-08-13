@@ -4,9 +4,11 @@ import java.util.ArrayList;
 
 public class Ayudante extends Estudiante{
     public ArrayList<Paralelo> ayudantias;
-    Ayudante(){
-    	super();
+
+    public Ayudante(String codigo, String nombre, String apellido, int edad) {
+        super(codigo, nombre, apellido, edad);
     }
+    
 
     public ArrayList<Paralelo> getAyudantias() {
         return ayudantias;
